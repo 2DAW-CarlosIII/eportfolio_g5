@@ -1,12 +1,12 @@
 @props(['titulo' => null])
 
 <!DOCTYPE html>
-<html lang="zxx">
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SendIt</title>
+    <title>{{ $titulo ? $titulo . ' · ' : '' }}{{ config('app.name') }}</title>
     <script src="//unpkg.com/alpinejs" defer=""></script>
     <link rel="icon" type="image/x-icon" href="./imgs/favico.png">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
@@ -17,11 +17,16 @@
         rel="stylesheet">
   
     @vite(['resources/css/app.css', 'resources/js/app.js'])
-
 </head>
-
 <body class="inter antialiased bg-[#0d0e11]">
-    <!-- Uso de componentes-->
+    <x-sendit.header />
+    
+    <x-sendit.main :titulo="$titulo">
+        {{ $slot }}
+    </x-sendit.main>
+
+    <x-sendit.footer />
+
 </body>
 
 </html>

@@ -8,9 +8,5 @@
         'Segoe UI Symbol', 'Noto Color Emoji';
 
     /* Plantilla sendit */
-    .inter {
-      font-family: "Inter", serif;
-      font-weight: 400;
-      font-style: normal;
-    }
+    --font-inter: 'Inter', serif;
 }
