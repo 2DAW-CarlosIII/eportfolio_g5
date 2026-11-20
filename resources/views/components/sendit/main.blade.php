@@ -8,7 +8,7 @@
         </h2>
         <div class="flex flex-col md:grid grid-cols-2 gap-4">
             <div class="col-span-1 flex flex-col gap-4 items-left bg-white rounded-3xl px-8 pb-8">
-            <img src="./imgs/ihpone-mocup3.png" class="max-w-[300px] mx-auto mb-6" alt="">
+            <img src="{{ asset('sendit/images/ihpone-mocup3.png') }}" class="max-w-[300px] mx-auto mb-6" alt="">
             <h3 class="text-xl font-bold">User data</h3>
             <p class="text-sm text-gray-600">
                 Quo laboriosam quas saepe sunt alias delectus ducimus quidem natus, suscipit id aliquid consectetur.
@@ -29,7 +29,7 @@
                 Get Started
             </a>
             <div class="absolute w-full left-0 bottom-0 flex">
-                <img src="./imgs/hero.png" class="max-w-[80%] ml-auto" alt="">
+                <img src="{{ asset('sendit/images/hero-black.png') }}" class="max-w-[80%] ml-auto" alt="">
             </div>
             </div>
             <div class="col-span-2 flex flex-col gap-4 items-center bg-white rounded-3xl p-10 md:p-20">

@@ -31,7 +31,7 @@
           Conditions</a>.
       </small>
       <div class="mt-20">
-        <img src="./imgs/hero-black.png" class="mx-auto w-full max-w-[1000px] rounded shadow-2xl" alt="">
+        <img src="{{ asset('sendit/images/hero-black.png') }}" class="mx-auto w-full max-w-[1000px] rounded shadow-2xl" alt="">
       </div>
     </div>
 </section>
