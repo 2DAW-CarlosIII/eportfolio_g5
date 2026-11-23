@@ -2,13 +2,15 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\View\View;
+
 class PerfilController extends Controller
 {
     /**
      * Handle the incoming request.
      */
-    public function __invoke(?int $id = null)
+    public function __invoke(?int $id = null): View
     {
-        return ($id ? "Perfil del usuario " . $id : "Mi perfil");
+        return view('perfil', ['id' => $id]);
     }
 }

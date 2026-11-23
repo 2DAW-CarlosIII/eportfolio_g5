@@ -30,11 +30,6 @@ Route::prefix("evidencias")->name('evidencias.')->group(function () {
     })->name('edit')->whereNumber('id');
 });
 
-/*Route::get('perfil/{id?}', function ($id = null) {
-    return ($id ? "Perfil del usuario " . $id : "Mi perfil");
-})->name('perfil')->whereNumber('id');
-*/
-
 Route::get('perfil/{id?}', PerfilController::class)->name('perfil')->whereNumber('id');
 
 Route::get('acerca', function () {
