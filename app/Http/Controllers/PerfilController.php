@@ -7,7 +7,10 @@ use Illuminate\View\View;
 
 class PerfilController extends Controller
 {
-    public function __invoke(?int $id = null): View {
-        return ($id ? "Perfil del usuario " . $id : "Mi perfil");
+    public function __invoke(?int $id = null): View{
+
+        return view ("perfil", [
+            "id" => $id
+        ]);
     }
 }
