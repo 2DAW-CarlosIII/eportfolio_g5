@@ -1,10 +1,9 @@
 <?php
-
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\PerfilController;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
-    return view('home', ['centro' => config('eportfolio.centro')]);
-});
+Route::get('/', HomeController::class)->name("home");
 
 Route::prefix("evidencias")->name('evidencias.')->group(function () {
 
@@ -25,9 +24,7 @@ Route::prefix("evidencias")->name('evidencias.')->group(function () {
     })->name('edit')->whereNumber('id');
 });
 
-Route::get('perfil/{id?}', function ($id = null) {
-    return ($id ? "Perfil del usuario " . $id : "Mi perfil");
-})->name('perfil')->whereNumber('id');
+Route::get('perfil/{id?}', PerfilController::class)->name('perfil')->whereNumber('id');
 
 Route::get('acerca', function () {
     return [
