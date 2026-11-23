@@ -4,7 +4,7 @@
         @isset($id)
             Perfil del usuario {{ $id }}
         @else
-            Mi perfil
+            Mi perfil 
         @endisset
     </p>
 </x-layout>
