@@ -1,10 +1,18 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\PerfilController;
 
-Route::get('/', function () {
-    return view('home', ['centro' => config('eportfolio.centro')]);
-});
+
+require __DIR__ . '/ciclos-formativos.php';
+require __DIR__ . '/evidencias.php';
+require __DIR__ . '/familias-profesionales.php';
+require __DIR__ . '/modulos-formativos.php';
+
+
+Route::get('/', HomeController::class);
+Route::get('perfil/{id?}', PerfilController::class)->name('perfil')->whereNumber('id');
 
 Route::prefix("evidencias")->name('evidencias.')->group(function () {
 
@@ -25,9 +33,9 @@ Route::prefix("evidencias")->name('evidencias.')->group(function () {
     })->name('edit')->whereNumber('id');
 });
 
-Route::get('perfil/{id?}', function ($id = null) {
+/*Route::get('perfil/{id?}', function ($id = null) {
     return ($id ? "Perfil del usuario " . $id : "Mi perfil");
-})->name('perfil')->whereNumber('id');
+})->name('perfil')->whereNumber('id');*/
 
 Route::get('acerca', function () {
     return [
