@@ -9,8 +9,8 @@ class PerfilController extends Controller
     /**
      * Handle the incoming request.
      */
-    public function __invoke(?int $id = null)
+    public function __invoke(Request $request, $id = null)
     {
-        return ($id ? "Perfil del usuario " . $id : "Mi perfil");
+        return view('components.perfil', ['id' => $id]);
     }
 }
