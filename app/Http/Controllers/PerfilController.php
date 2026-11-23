@@ -11,6 +11,6 @@ class PerfilController extends Controller
      */
     public function __invoke(Request $request, $id = null)
     {
-        return ($id ? "Perfil del usuario " . $id : "Mi perfil");
+        return view('perfil', ['id' => $id]);
     }
 }
