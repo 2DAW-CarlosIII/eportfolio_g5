@@ -5,6 +5,7 @@
       </a>
       <nav class="hidden md:flex text-sm gap-8">
         <a href="#" class="underline">Home</a>
+        <a href="{{ route('familias-profesionales.index') }}">Familias Profesionales</a>
         <a href="#" class="hover:underline">Features</a>
         <a href="#" class="hover:underline">Pricing</a>
         <a href="#" class="hover:underline">Blog</a>
