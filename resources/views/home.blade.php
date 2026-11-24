@@ -1,3 +1,3 @@
-<x-sendit.layout titulo="Pantalla principal">
+<x-layout titulo="Pantalla principal">
     <p>Portada del {{ config('app.name') }}.</p>
-</x-sendit.layout>
+</x-layout>
