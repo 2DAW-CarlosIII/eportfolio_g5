@@ -8,6 +8,7 @@
         <a href="#" class="hover:underline">Features</a>
         <a href="#" class="hover:underline">Pricing</a>
         <a href="#" class="hover:underline">Blog</a>
+        <a href="{{ route('ciclos-formativos.index') }}" class="hover:underline">Ciclos Formativos</a>
       </nav>
       <a href="" class="text-sm py-1 px-4 border rounded-xl">
         Contact
