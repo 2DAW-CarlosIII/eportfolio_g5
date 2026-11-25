@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\FamiliaProfesionalController;
 
 Route::controller(FamiliaProfesionalController::class)->prefix('familias-profesionales')->name('familias-profesionales.')->group(function () {
