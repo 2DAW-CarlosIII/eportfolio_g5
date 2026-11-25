@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ModuloFormativoController;
 
 Route::controller(ModuloFormativoController::class)->prefix('modulos-formativos')->name('modulos-formativos.')->group(function () {
