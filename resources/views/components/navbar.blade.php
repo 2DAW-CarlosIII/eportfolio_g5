@@ -4,7 +4,6 @@
         <i class="bi bi-send-fill text-xl text-[#cff245]"></i> <span>SendIt</span>
       </a>
       <nav class="hidden md:flex text-sm gap-8">
-        <a href="#" class="underline">Home</a>
         <a href="{{ route('evidencias.index') }}" class="hover:underline">Evidencias</a>
         <a href="{{ route('familias-profesionales.index') }}" class="hover:underline">Familias Profesionales</a>
         <a href="{{ route('ciclos-formativos.index') }}" class="hover:underline">Ciclos Formativos</a>
