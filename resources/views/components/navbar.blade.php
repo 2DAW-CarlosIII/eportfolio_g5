@@ -5,11 +5,10 @@
       </a>
       <nav class="hidden md:flex text-sm gap-8">
         <a href="#" class="underline">Home</a>
-        <a href="#" class="hover:underline">Features</a>
-        <a href="#" class="hover:underline">Pricing</a>
-        <a href="#" class="hover:underline">Blog</a>
+        <a href="{{ route('evidencias.index') }}" class="hover:underline">Evidencias</a>
+        <a href="{{ route('familias-profesionales.index') }}" class="hover:underline">Familias Profesionales</a>
         <a href="{{ route('ciclos-formativos.index') }}" class="hover:underline">Ciclos Formativos</a>
-        <a href="{{ route('familias-profesionales.index') }}">Familias Profesionales</a>
+        <a href="{{ route('modulos-formativos.index') }}" class="hover:underline">Modulos Formativos</a>
       </nav>
       <a href="" class="text-sm py-1 px-4 border rounded-xl">
         Contact
