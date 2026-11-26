@@ -19,3 +19,4 @@ Route::get('acerca', function () {
         "centro" => config('eportfolio.centro'),
     ];
 })->name('acerca');
+
