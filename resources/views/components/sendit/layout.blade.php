@@ -21,6 +21,12 @@
     <x-sendit.header />
     
     <x-sendit.main :titulo="$titulo">
+        @session('mensaje')
+            <div class="mb-6 flex items-center gap-3 rounded-2xl border border-gray-900 bg-[#cff245] px-6 py-4 text-sm font-medium text-black">
+                <i class="bi bi-check-circle-fill text-lg"></i>
+                {{ $value }}
+            </div>
+        @endsession
         {{ $slot }}
     </x-sendit.main>
 
