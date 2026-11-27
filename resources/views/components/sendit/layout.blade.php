@@ -21,6 +21,17 @@
     <x-sendit.header />
     
     <x-sendit.main :titulo="$titulo">
+        @session('mensaje')
+        <div @class([
+            'bg-[#cff245] inline-flex items-center justify-center gap-2 rounded-[5px] font-bold text-black transition-colors',
+            'px-6 py-2.5' => ! false,
+            'min-w-[12em] px-9 py-4 text-2xl' => false,
+            'bg-dope-red hover:bg-dope-red-hover' => ! false,
+            'bg-dope-dark hover:bg-dope-dark-hover' => false,
+        ])>
+            {{ $value }}
+        </div>
+        @endsession
         {{ $slot }}
     </x-sendit.main>
 
