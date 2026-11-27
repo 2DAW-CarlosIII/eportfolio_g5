@@ -19,8 +19,3 @@ Route::get('acerca', function () {
         "centro" => config('eportfolio.centro'),
     ];
 })->name('acerca');
-
-Route::get('prueba-mensaje', function () {
-    return redirect()->route('evidencias.index')
-    ->with('mensaje', "aaaa");
-})->name('prueba-mensaje');
