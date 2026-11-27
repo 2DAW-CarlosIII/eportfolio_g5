@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\View\View;
+use App\Http\Requests\FamiliaProfesionalRequest;
 
 class FamiliaProfesionalController extends Controller
 {
@@ -36,6 +37,20 @@ class FamiliaProfesionalController extends Controller
             'familiaProfesional' => $this->familiasProfesionales[$id],
             'id' => $id,
         ]);
+    }
+
+    public function store(FamiliaProfesionalRequest $request)
+    {
+        $datos = $request->validated();
+        return redirect()->route('familias-profesionales.index')->with('mensaje', 'Familia profesional «' . $request->nombre . '» creada.');
+    }
+
+    public function update(FamiliaProfesionalRequest $request, int $id)
+    {
+        abort_unless(isset($this->familiasProfesionales[$id]), 404);
+        $datos = $request->validated();
+        
+        return redirect()->route('familias-profesionales.show', ['id' => $id])->with('mensaje', 'Familia profesional «' . $request->nombre . '» actualizada.');
     }
 
     private $familiasProfesionales = array(
