@@ -2,7 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
+
+use App\Http\Requests\ModuloFormativoRequest;
 
 class ModuloFormativoController extends Controller
 {
@@ -27,7 +28,20 @@ class ModuloFormativoController extends Controller
         abort_unless(isset($this->modulosFormativos[$id]), 404);
         return view('modulos-formativo.edit', ['moduloFormativo' => $this->modulosFormativos[$id], 'id' => $id]);
     }
+    public function store(ModuloFormativoRequest $request)
+    {
+        $datos = $request->validated();
 
+        return redirect()->route('modulos-formativos.index')->with('mensaje', 'Módulo formativo «' . $datos['nombre'] . '» creado.');
+    }
+    public function update(ModuloFormativoRequest $request, $id)
+    {
+        $datos = $request->validated();
+
+        abort_unless(isset($this->modulosFormativos[$id]), 404);
+
+        return redirect()->route('modulos-formativos.show', $id)->with('mensaje', 'Módulo formativo «' . $datos['nombre'] . '» actualizado.');
+    }
     private $modulosFormativos = array(
         // ==========================================
         // TÉCNICO SUPERIOR EN DESARROLLO DE APLICACIONES WEB (DAPW3)

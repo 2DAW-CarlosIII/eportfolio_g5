@@ -9,9 +9,9 @@
             
 
             <div class="gap-3 pt-2 ">
-                <boton>
-                    <a decoration="underline" href="{{ route('modulos-formativos.show', $id) }}">Ver detalles del módulo formativo con código {{ $moduloFormativo['codigo'] }}</a>
-                </boton>
+                <x-sendit.boton :href="route('modulos-formativos.show', $id)">
+                    Ver detalles del módulo formativo con código {{ $moduloFormativo['codigo'] }}
+                </x-sendit.boton>
             </div>
         </div>
     </li>
