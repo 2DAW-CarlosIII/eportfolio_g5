@@ -14,12 +14,12 @@
             <p><strong>Descripción</strong> {{ $moduloFormativo['descripcion'] }}</p>
 
             <div class="flex gap-3 pt-2">
-                <boton>
-                    <a href="{{ route('modulos-formativos.edit', $id) }}">Editar Módulo Formativo</a>
-                </boton>
-                <boton>
-                    <a href="{{ route('modulos-formativos.index') }}">Volver al listado</a>
-                </boton>
+                <x-sendit.boton :href="route('modulos-formativos.edit', $id)">
+                    Editar Módulo Formativo
+                </x-sendit.boton>
+                <x-sendit.boton :href="route('modulos-formativos.index')">
+                    Volver al listado
+                </x-sendit.boton>
             </div>
         </div>
     </li>
