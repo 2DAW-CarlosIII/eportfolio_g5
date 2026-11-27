@@ -39,7 +39,7 @@ class CicloFormativoController extends Controller
         $datos = $request->validated();
 
         return redirect()->route('ciclos-formativos.index')
-            ->with('mensaje', "Ciclo Formativo creado correctamente.");
+            ->with('mensaje', "Ciclo formativo «{$datos['nombre']}» creado.");
     }
 
     public function update(CicloFormativoRequest $request, int $id): RedirectResponse
@@ -48,8 +48,8 @@ class CicloFormativoController extends Controller
 
         $datos = $request->validated();
 
-        return redirect()->route('ciclos-formativos.store', $id)
-                ->with('mensaje', "Ciclo Formativo actualizado correctamente");
+        return redirect()->route('ciclos-formativos.show', $id)
+                ->with('mensaje', "Ciclo formativo «{$datos['nombre']}» actualizado.");
     }
 
     private $ciclosFormativos = array(

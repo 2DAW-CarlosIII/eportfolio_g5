@@ -35,11 +35,13 @@ class CicloFormativoRequest extends FormRequest
     public function messages(): array
     {
         return [
-            'codigo_familia.required' => 'El codigo de la familia profesional es obligatorio.',
+            'codigo_familia.required' => 'El código de la familia profesional es obligatorio.',
             'grado.required' => 'El grado es obligatorio.',
-            'codigo.required' => 'El codigo es obligaotrio.',
-            'nombre.required' => 'El nombre del proyecto es obligatorio.',
+            'codigo.required' => 'El codigo es obligaotorio.',
+            'nombre.required' => 'El nombre de es obligatorio.',
             'grado.in' => 'El grado debe ser básico, medio o superior.',
+            'codigo_familia.regex' => 'El código de la familia solo admite letras, números, guiones y guiones bajos.',
+            'codigo.regex' => 'El código solo admite letras, números, guiones y guiones bajos.',
         ];
     }
 
